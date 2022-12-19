@@ -17,6 +17,10 @@
     width: auto;
 }
 
+a.active{
+    color: blue !important;
+}
+
 
 .navbar{
     display: flex;
@@ -66,9 +70,16 @@
     align-items: center;
     height: 1000px;
     flex-flow: column;
+    content: '';
+    background: url('./Assets/header.jpg') no-repeat center center/cover;
+    clip-path: polygon(0 0, 100% 0, 100% 91%, 100% 92%, 0 100%, 0% 50%);
+    top: 0px;
+    left: 0px;
+    height: 85vh;
+    z-index: -1;
 }
 
-.container::before {
+/* .container::before {
     content: '';
     background: url('./Assets/header.jpg') no-repeat center center/cover;
     clip-path: polygon(0 0, 100% 0, 100% 91%, 100% 92%, 0 100%, 0% 50%);
@@ -77,9 +88,9 @@
     top: 0px;
     left: 0px;
     width: 115vw;
-    height: 115vh;
+    height: 130vh;
     z-index: -1;
-}
+} */
 
 @-webkit-keyframes typing {from {width:0;}}
 @-webkit-keyframes blink-caret {50% {border-color: transparent;}}
@@ -105,6 +116,7 @@
 .mid{
     display: flex;
     justify-content: center;
+    margin-top: -135px;
 }
 .first,.second,.third{
     margin:20px;
@@ -139,7 +151,7 @@ text-shadow: 2px 2px 4px #000000;
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 500px;
+        height: 330px;
         flex-flow: column;
 }
 
@@ -175,7 +187,7 @@ text-shadow: 2px 2px 4px #000000;
 .end-first:hover p,.end-second:hover p,.end-third:hover p{
     display: block !important;  
     margin-top: 10%; 
-}120vh
+}
 .end-first:hover img,.end-second:hover img,.end-third:hover img{
     margin-top: -5% !important;
     margin-left: 45% !important; 
@@ -194,32 +206,41 @@ text-shadow: 2px 2px 4px #000000;
 
 
 
-@media only screen and (max-width: 1055px) {
+@media only screen and (max-width:1150px) {
 
     .end{
         flex-flow: column;
         align-items: center;
     }
 }
-@media only screen and (max-width: 410px) {
+@media only screen and (max-width: 412px) {
 
     .cont{
         justify-content: center;
         text-align: center;
     }
 }
-@media only screen and (max-width: 1215px) {
+ 
+@media only screen and (max-width:608px) {
+
+    #ani{
+        font-size: 25px !important;
+    }
+}
+@media only screen and (max-width: 1230px) {
 
     .mid{
         flex-flow: column;
         align-items: center;
-    }
+    } 
     .container::before{
-        height: 120vh;
+        height: 130vh;
+       
     }
-}
+} 
 
-@media only screen and (max-width: 488px) {
+
+@media only screen and (max-width: 412px) {
 
     .container{
         justify-content: center;
@@ -227,13 +248,10 @@ text-shadow: 2px 2px 4px #000000;
         align-items: center;
     }
     
+    
 }
 
-/* @media only screen and(max-width:1617px)
-{
-    
-} */
-@media only screen and (max-width: 1000px)
+@media only screen and (max-width: 750px)
 {
     .navbar{
         display: none;
@@ -260,24 +278,21 @@ text-shadow: 2px 2px 4px #000000;
       }
       
       .droplink .active {
-          background-color: #1c98e6;
-          padding: 14px;
-          border-radius: 2px;
-          width: 48px;
-          margin-left: 424px;
-          margin-bottom: 100px;
+        background-color: #1c98e6;
+        padding: 14px;
+        border-radius: 2px;
+        width: 48px;
+        margin-left: 290px;
+        margin-bottom: 132px;
       }
     
       .droplink span i{
         margin-top: 103px;
-        width: 522px;
+        width: 654px;
         height: 45px;
         background-color: #1c98e6;
         padding-top: 30px;
-      }
-
-      span{
-        margin-right: 468px;
+        margin-left: 2px;
       }
 
       .dropbtn {
@@ -291,7 +306,7 @@ text-shadow: 2px 2px 4px #000000;
       .dropdown-content {
         position: relative;
         display:inline-block;
-        right: 58px;
+        /* right: 58px; */
       }
       
       .droplink {
@@ -304,28 +319,98 @@ text-shadow: 2px 2px 4px #000000;
         width: 100%;
         text-align: center;
         padding-top: 1010px;
-        padding-left: 214px;
-        padding-bottom: 222px;
-        padding-right: 184px;
+        left: -89px;
+        padding-bottom: 90px;
+        padding-right: 110px;
+        margin-right: -80px;
       }
 
       .droplink a{
         margin-right: 100px;
         color: black;
-        padding: 25px;
+        padding: 40px;
         text-decoration: none;
         display: block;
-        padding-right: 391px;
+        padding-left: 245px;
+
       }
       
-    .dropdown-content:hover .droplink{
+    /* .dropdown-content:hover .droplink{
             display: block;
-         } 
+         }  */
             
     /* .droplink span:hover .droplink{
             display:none;
         }  */
 
+} 
+
+@media only screen and (max-width: 425px)
+{
+    .droplink{
+        margin-right: -78px;
+    }
+    .droplink a{
+        padding-left: 192px;
+    }
+    .droplink .active{
+        margin-left: 179px;
+    }
+    .droplink span i{
+        width: 435px
+    }
+}
+
+@media only screen and (max-width: 375px)
+{
+   
+    .droplink a{
+        padding-left: 167px;
+    }
+    .droplink .active{
+        margin-left: 154px;
+    }
+    .droplink span i{
+        width: 370px
+    }
+
+    #ani{
+        font-size: 20px !important;
+    }
 }
 
 
+@media only screen and (max-width: 320px)
+{
+    .droplink a{
+        padding-left: 134px;
+    }
+    .droplink .active{
+        margin-left: 120px;
+    }
+    .droplink span i{
+        width: 303px
+    }
+
+    .container{
+        width: 39vh;
+    }
+    /* .mid{
+        flex-shrink: 9;
+    } */
+
+}
+
+/* @media only screen and (max-width: 1224px)
+{
+    .container{
+        height: 66vh;
+    }
+    .cont{
+        height: 814px;
+    }
+
+    .cont p{
+        font-size: 100px;
+    }
+} */

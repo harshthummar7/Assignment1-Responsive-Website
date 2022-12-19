@@ -12,7 +12,7 @@
     <script type='text/javascript'>
         window.addEventListener('scroll', () => {
 
-            if (document.documentElement.scrollTop > 450) 
+            if (document.documentElement.scrollTop > 280) 
             {  
                 
                 const ele = document.querySelector('.nav-list');
@@ -29,7 +29,7 @@
                 }
                 ele2[0].style.color='blue';
                 
-                 if(document.documentElement.scrollTop > 800)
+                 if(document.documentElement.scrollTop > 720)
                  {
                     ele2[0].style.color='black';
                     ele2[1].style.color='blue';
@@ -87,8 +87,17 @@
             {
                 const ele5dropdown = document.querySelector('.droplink');
                 ele5dropdown.style.display="none";
-            
+                const mainContainer = document.getElementsByClassName('main-container');
+            mainContainer[0].style.display = 'block'
+                
             }
+        
+        function openHamburger (){
+            const dropLink = document.getElementsByClassName('droplink');
+            dropLink[0].style.display = 'block'
+            const mainContainer = document.getElementsByClassName('main-container');
+            mainContainer[0].style.display = 'none'
+        }
 
         // function open()
         //     {
@@ -105,28 +114,13 @@
 
 </head>
 <body>
-    <nav class="navbar">
-        <ul class="nav-list">
-            <div class="logo">
-                <img src="./Assets/logo.png" alt="logo">
-            </div>
-            <div class="link">
-                <li><a href="#intro">Intro</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#team">Team</a></li>
-                <li><a href="#pricing">Pricing</a></li>
-                <li><a class="active" href="#signup">Signup</a></li>
-            </div>
-        </ul>
-    </nav>    
 
     <nav class="dropnav">
         <div class="dropdown">
             <div class="droplogo">
                 <img src="./Assets/logo.png" alt="logo">
             </div>
-            <div class="dropdown-content">
-                <div class="dropbtn">
+                <div class="dropbtn" onclick="openHamburger()">
                     <i class="fa fa-bars"></i>
                 </div>
                 <div class="droplink">
@@ -141,91 +135,111 @@
         </div>
     </nav>
 
-        <div class="container">
-            <h3 style="color: white;">Take car of your body.</h3>
-            <h1 style="color: white;" id='ani'>it's the only place you have to live</h1>
-        </div>
+    <div class="main-container">
 
-        <div class="mid">
-            <div class="first">
-                <img src="./Assets/table-1.jpg">
-                <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
-                    <table>
-                        <tr style="height: 130px;width:370px;">
-                          <th>Today's Schedule</th>
-                          <th><i class="fa fa-solid fa-clock" style="color: #ddd;"></i></th>
-                        </tr>
-                        <tr>
-                          <td>Early Exercise</td>
-                          <td>8:30-10:30</td>
-                        </tr>
-                        <tr>
-                            <td>Muscle Building</td>
-                            <td>8:30-10:30</td>
-                          </tr>
-                          <tr>
-                            <td>Cardio</td>
-                            <td>8:30-10:30</td>
-                          </tr>
-                      </table>
-                </div>   
-            </div>
-            <div class="second">
-                <img src="./Assets/table-2.jpg">
-                <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
-                    <p style="position: absolute;color:#ddd;text-shadow: 2px 2px 4px #000000;top: 5%; left: 10%"><b>Premium Membership</b></p>
-                    <h2 style="position: absolute;color: #ddd;top: 65%;left: 10%">Register Today</h2>
-                    <h1 style="position: absolute;color: #ddd;text-shadow: 2px 2px 2px white;top:72%;left: 10%">20% Discount</h1>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <div class="logo">
+                    <img src="./Assets/logo.png" alt="logo">
                 </div>
-                
-            </div>
-            <div class="third">
-                <img src="./Assets/table-3.jpg">
-                <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
-                    <p style="position: absolute;top: 5%; left: 10%;color:#ddd;text-shadow: 2px 2px 4px #000000;"><b>Happy Clients</b></p>
-                    <h2 style="position: absolute;top: 40%; left: 10%;color:#ddd;text-shadow: 2px 2px 4px #000000;"><b>I couldn't be more happy with the results!</b></h2>
-                    <p style="position: absolute;top: 80%; left: 10%;color:#ddd;text-shadow: 2px 2px 3px #ddd;font-family: system-ui;">Adam Jordan</p>
-               </div>
-            </div>
-        </div>
-
-
-
-        <div class="cont">
-            <h1><b>Services</b></h1>
-            <p style="text-align: center;">Achieve the best results with our wide variety of training options!</p>
-        </div>
-
-
+                <div class="link">
+                    <li><a href="#intro">Intro</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a class="active" href="#signup">Signup</a></li>
+                </div>
+            </ul>
+        </nav>    
+    
         
-
-        <div class="end">
-
-            <div class="end-first">
-                <img src="./Assets/icons/heart-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;padding: 0 5px;">
-                <div>
-                    <h3 style="text-align: center;margin-top: 2%;">Cardio Training</h3>
-                    <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
-               </div>
+    
+            <div class="container">
+                <h3 style="color: white;">Take car of your body.</h3>
+                <h1 style="color: white;" id='ani'>it's the only place you have to live</h1>
             </div>
-
-            <div class="end-second">
-                <img src="./Assets/icons/guru-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;">
-                <div>
-                    <h3 style="text-align: center;margin-top: 2%;">Yoga Pilates</h3>
-                    <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+    
+            <div class="mid" id="intro">
+                <div class="first">
+                    <img src="./Assets/table-1.jpg">
+                    <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
+                        <table>
+                            <tr style="height: 130px;width:370px;">
+                              <th>Today's Schedule</th>
+                              <th><i class="fa fa-solid fa-clock" style="color: #ddd;"></i></th>
+                            </tr>
+                            <tr>
+                              <td>Early Exercise</td>
+                              <td>8:30-10:30</td>
+                            </tr>
+                            <tr>
+                                <td>Muscle Building</td>
+                                <td>8:30-10:30</td>
+                              </tr>
+                              <tr>
+                                <td>Cardio</td>
+                                <td>8:30-10:30</td>
+                              </tr>
+                          </table>
+                    </div>   
+                </div>
+                <div class="second">
+                    <img src="./Assets/table-2.jpg">
+                    <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
+                        <p style="position: absolute;color:#ddd;text-shadow: 2px 2px 4px #000000;top: 5%; left: 10%"><b>Premium Membership</b></p>
+                        <h2 style="position: absolute;color: #ddd;top: 65%;left: 10%">Register Today</h2>
+                        <h1 style="position: absolute;color: #ddd;text-shadow: 2px 2px 2px white;top:72%;left: 10%">20% Discount</h1>
+                    </div>
+                    
+                </div>
+                <div class="third">
+                    <img src="./Assets/table-3.jpg">
+                    <div style="position: absolute;display:flex; justify-content: center;width: 370px;height: 286px;">
+                        <p style="position: absolute;top: 5%; left: 10%;color:#ddd;text-shadow: 2px 2px 4px #000000;"><b>Happy Clients</b></p>
+                        <h2 style="position: absolute;top: 40%; left: 10%;color:#ddd;text-shadow: 2px 2px 4px #000000;"><b>I couldn't be more happy with the results!</b></h2>
+                        <p style="position: absolute;top: 80%; left: 10%;color:#ddd;text-shadow: 2px 2px 3px #ddd;font-family: system-ui;">Adam Jordan</p>
+                   </div>
                 </div>
             </div>
-
-            <div class="end-third">
-                <img src="./Assets/icons/weight-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;">
-                <div>
-                    <h3 style="text-align: center;margin-top: 2%;">Power Training</h3>
-                    <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+    
+    
+    
+            <div class="cont" id="services">
+                <h1><b>Services</b></h1>
+                <p style="text-align: center;">Achieve the best results with our wide variety of training options!</p>
+            </div>
+    
+    
+            
+    
+            <div class="end">
+    
+                <div class="end-first">
+                    <img src="./Assets/icons/heart-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;padding: 0 5px;">
+                    <div>
+                        <h3 style="text-align: center;margin-top: 2%;">Cardio Training</h3>
+                        <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+                   </div>
                 </div>
-            </div>
-            </div>
-         </div>
+    
+                <div class="end-second">
+                    <img src="./Assets/icons/guru-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;">
+                    <div>
+                        <h3 style="text-align: center;margin-top: 2%;">Yoga Pilates</h3>
+                        <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+                    </div>
+                </div>
+    
+                <div class="end-third">
+                    <img src="./Assets/icons/weight-blue.png" style="height: 25px; width: 25px;margin-top: 30%;margin-left:45%;">
+                    <div>
+                        <h3 style="text-align: center;margin-top: 2%;">Power Training</h3>
+                        <p style="text-align: center;display: none;">A elementum ligula lacus ac quam ultrices a scelerisque praesent vel suspendisse scelerisque a aenean hac montes</p>
+                    </div>
+                </div>
+                </div>
+             </div>
+    </div>
         
 
          
