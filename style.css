@@ -156,7 +156,10 @@ text-shadow: 2px 2px 4px #000000;
 
 
 
-
+.end-first .a{
+    justify-content: center;
+    align-items: center;
+}
 
 
 
@@ -186,16 +189,32 @@ text-shadow: 2px 2px 4px #000000;
 .end-first:hover p,.end-second:hover p,.end-third:hover p{
     display: block !important;  
     margin-top: 10%; 
+    animation: zoom-in-zoom-out 0.5s ease 1;
 }
+
+@keyframes zoom-in-zoom-out{
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(0.5,0.5);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+
 .end-first:hover img,.end-second:hover img,.end-third:hover img{
     margin-top: -5% !important;
     margin-left: 45% !important; 
     background-color: white;
     transition: 1s;
     z-index: 100;
+    
 }
 .end-first:hover h3,.end-second:hover h3,.end-third:hover h3{
-    margin-top: 10% !important;
+    margin-top: 20% !important;
+    animation: zoom-in-zoom-out 0.5s ease 1;
 }
 
 
@@ -352,7 +371,7 @@ text-shadow: 2px 2px 4px #000000;
         margin-left: 179px;
     }
     .droplink span i{
-        width: 435px
+        width: 406px
     }
 }
 
@@ -422,7 +441,7 @@ text-shadow: 2px 2px 4px #000000;
         margin-left: 154px;
     }
     .droplink span i{
-        width: 370px
+        width: 355px
     }
 
     #ani{
@@ -455,7 +474,7 @@ text-shadow: 2px 2px 4px #000000;
         margin-left: 120px;
     }
     .droplink span i{
-        width: 303px
+        width: 300px
     }
 
     .container{
@@ -488,6 +507,3 @@ text-shadow: 2px 2px 4px #000000;
     font-size: 19px !important;
    }
 }
-
-
-
